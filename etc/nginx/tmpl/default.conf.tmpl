@@ -1,0 +1,10 @@
+server {
+
+    listen                  80;
+    server_name             ${VIRTUAL_HOST};
+    
+    root                    /var/www/${HTDOCS_DIR};
+
+    include                 extra/restrictions.inc;
+    include                 extra/fastcgi.inc;
+}
