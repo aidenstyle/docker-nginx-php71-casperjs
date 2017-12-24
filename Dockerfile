@@ -19,6 +19,7 @@ RUN yum update -y && \
                php-pgsql && \
     yum install -y gettext && \
     yum install -y phantomjs casperjs && \
+    yum install -y cronie-noanacron && \
     yum clean all && \
     rm -rf /etc/nginx/* && rm -rf /var/www/*
     
