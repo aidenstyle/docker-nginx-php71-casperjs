@@ -19,7 +19,10 @@ location ~ /\. {
 
 location ~* .+.(jpg|jpeg|gif|png|ico|swf|css|js|xml|zip|ttf|woff|eot)$ {
     access_log off;
-    expires 30d;
+    # expires 30d;
+    # Disable cache
+    add_header Cache-Control no-cache;
+    expires 1s;
 }
 
 location ~ .(html|htm)$ {
